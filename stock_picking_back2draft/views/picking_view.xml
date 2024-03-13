@@ -7,13 +7,12 @@
         <field name="arch" type="xml">
             <xpath expr="//button[@name='action_cancel']" position="after">
                 <button
-                    name="action_back_to_draft"
-                    states="cancel"
-                    string="Back to draft"
                     groups="base.group_user"
+                    invisible="state not in ['cancel']"
+                    name="action_back_to_draft"
+                    string="Back to draft"
                     type="object"
                 />
-            </xpath>
-        </field>
+            </xpath></field>
     </record>
 </odoo>

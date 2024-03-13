@@ -12,10 +12,8 @@
         <field name="arch" type="xml">
             <field name="usage" position="after">
                 <field
+                    invisible="usage not in ['internal', 'transit']"
                     name="allow_negative_stock"
-                    attrs="{'invisible': [('usage', 'not in', ['internal', 'transit'])]}"
-                />
-            </field>
-        </field>
+                /></field></field>
     </record>
 </odoo>
